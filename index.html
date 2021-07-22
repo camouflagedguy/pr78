@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>My family</title>
+</head>
+<body>
+<h1>My family.</h1>
+<img id="familyphotos" src="https://image.shutterstock.com/image-vector/working-mom-260nw-158801597.jpg" style="width: 30%" id="family_member_image">
+<h4 id="family_member_name"></h4>
+<button onclick="update();">Next</button>
+<script>
+var images= [
+"https://us.123rf.com/450wm/ylivdesign/ylivdesign1605/ylivdesign160500244/56085314-dad-icon-in-cartoon-style-on-a-white-background.jpg?ver=6",
+"https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190505227/122760736-little-girl-avatar-character-vector-illustration-design.jpg?ver=6",
+"https://st.depositphotos.com/1077687/1903/v/950/depositphotos_19036597-stock-illustration-cartoon-boy.jpg",
+"https://i.pinimg.com/originals/d5/6c/d2/d56cd25436d0d3f56ad2f143750f7455.png",
+"https://i.pinimg.com/originals/db/f5/08/dbf508e27715f8ed3730bec349092789.jpg",
+"https://www.pngitem.com/pimgs/m/120-1203252_clip-art-mom-png-for-mother-cartoon-png.png" 
+];
+
+var names= ["Ranbir Singh","Diljeet Singh","Rocky Singh","Alia Singh","Soni Singh","Riya Singh"];
+
+var i = 0;
+function update()
+{
+i++;
+var numbers_of_family_members_in_array = 5
+if(i > numbers_of_family_members_in_array)
+{
+i = 0
+}
+var updatedImage = images[i];
+var updatedName = names[i];
+document.getElementById("family_member_image").src = updatedImage;
+document.getElementById("family_member_name").innerHTML = updatedName;
+}
+</script>
+</body>
+</html>
